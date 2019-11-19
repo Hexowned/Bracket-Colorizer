@@ -114,7 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bracket\Classifier.cs" />
-    <Compile Include="Bracket\ClassifierDefinitions.cs" />
+    <Compile Include="Bracket\ClassificationDefinitions.cs" />
     <Compile Include="Bracket\ClassifierProvider.cs" />
     <Compile Include="Bracket\Tagger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

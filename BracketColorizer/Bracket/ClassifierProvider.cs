@@ -10,25 +10,23 @@ using System.ComponentModel.Composition;
 
 namespace BracketColorizer.Bracket
 {
-    //TODO: figure out this casting issue
+    [Export(typeof(IClassifierProvider))]
+    [ContentType("CSharp")]
+    internal class ClassifierProvider : IClassifierProvider
+    {
+        [Import]
+        internal IClassificationTypeRegistryService ClassificationTypeRegistry = null;
 
-    //[Export(typeof(IClassifierProvider))]
-    //[ContentType("CSharp")]
-    //internal class ClassifierProvider : IClassifierProvider
-    //{
-    //    [Import]
-    //    internal IClassificationTypeRegistryService ClassificationTypeRegistry = null;
-    //
-    //   static Classifier classifier;
-    //
-    //    public IClassifier GetClassifier(ITextBuffer buffer)
-    //    {
-    //        if (classifier == null)
-    //            classifier = new Classifier(ClassificationTypeRegistry);
-    //
-    //        return classifier;
-    //    }
-    //}
+        private static Classifier classifier;
+
+        public IClassifier GetClassifier(ITextBuffer buffer)
+        {
+            if (classifier == null)
+                classifier = new Classifier(ClassificationTypeRegistry);
+
+            return classifier;
+        }
+    }
 
     [Export(typeof(ITaggerProvider))]
     [ContentType("CSharp")]
