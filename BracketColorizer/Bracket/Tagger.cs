@@ -83,17 +83,17 @@ namespace BracketColorizer.Bracket
 
                 while (brace.Count > 0)
                 {
-                    SyntaxNodeOrToken level1 = brace.First();
-                    SyntaxNodeOrToken level2 = null;
+                    SyntaxNodeOrToken line1 = brace.First();
+                    SyntaxNodeOrToken line2 = null;
 
-                    string start = level1.ToString();
+                    string start = line1.ToString();
                     string end = ")";
 
                     if (start == "{") { end = "}"; }
                     if (start == "[") { end = "]"; }
                     if (start != "(" && start != "{" && start != "[") { break; }
 
-                    brace.Remove(level1);
+                    brace.Remove(line1);
 
                     int par = 1;
                     for (int i = 0; i < brace.Count; ++i)
@@ -106,8 +106,8 @@ namespace BracketColorizer.Bracket
 
                         if (par == 0)
                         {
-                            level2 = check;
-                            brace.Remove(level2);
+                            line2 = check;
+                            brace.Remove(line2);
                             break;
                         }
                     }
@@ -115,10 +115,10 @@ namespace BracketColorizer.Bracket
                     string _tp = ((_dept % 8) + 1).ToString();
                     IClassificationType classificationType = _classificationTypeRegistry.GetClassificationType(_tp);
 
-                    _tagSpans.Add(level1.Span.ToTagSpan(snapshot, classificationType));
+                    _tagSpans.Add(line1.Span.ToTagSpan(snapshot, classificationType));
 
-                    if (level2 != null)
-                        _tagSpans.Add(level2.Span.ToTagSpan(snapshot, classificationType));
+                    if (line2 != null)
+                        _tagSpans.Add(line2.Span.ToTagSpan(snapshot, classificationType));
                     else
                         return;
                 }
