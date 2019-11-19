@@ -33,7 +33,7 @@ namespace BracketColorizer.Bracket
     [Export(typeof(ITaggerProvider))]
     [ContentType("CSharp")]
     [TagType(typeof(IClassificationTag))]
-    internal class ClassifierDefinitions : ITaggerProvider
+    internal class TaggerProvider : ITaggerProvider
     {
         [Import]
         internal IClassificationTypeRegistryService ClassificationTypeRegistry = null;
