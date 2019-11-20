@@ -49,6 +49,15 @@
     <Compile Include="Contracts\IPackageUserOptions.cs" />
     <Compile Include="JsonExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\FilePersistUserSettings.cs" />
+    <Compile Include="Settings\ICustomExport.cs" />
+    <Compile Include="Settings\IPersistSettings.cs" />
+    <Compile Include="Settings\ISettingsExport.cs" />
+    <Compile Include="Settings\ISettingsObject.cs" />
+    <Compile Include="Settings\ISettingsStore.cs" />
+    <Compile Include="Settings\ISolutionUserSettings.cs" />
+    <Compile Include="Settings\IStorageConversions.cs" />
+    <Compile Include="Settings\ITypedSettingsStore.cs" />
     <Compile Include="Settings\IUpdatableSettings.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
