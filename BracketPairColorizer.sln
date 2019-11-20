@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BracketPairColorizer", "BracketPairColorizer\BracketPairColorizer.csproj", "{DB007425-4912-45CB-9673-E7859475DA71}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BracketPairColorizer.Core", "BracketPairColorizer.Core\BracketPairColorizer.Core.csproj", "{3E0D5BDF-FFA1-4002-8819-C2C4EBC0BA21}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BracketPairColorizer.Languages", "BracketPairColorizer.Languages\BracketPairColorizer.Languages.csproj", "{69CD983F-2C44-4DFE-A671-CE4074A131EB}"
@@ -34,10 +32,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DB007425-4912-45CB-9673-E7859475DA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB007425-4912-45CB-9673-E7859475DA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB007425-4912-45CB-9673-E7859475DA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB007425-4912-45CB-9673-E7859475DA71}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E0D5BDF-FFA1-4002-8819-C2C4EBC0BA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E0D5BDF-FFA1-4002-8819-C2C4EBC0BA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E0D5BDF-FFA1-4002-8819-C2C4EBC0BA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,7 +61,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{DB007425-4912-45CB-9673-E7859475DA71} = {A95F154F-913C-45E8-AD8D-93D6C9C46C54}
 		{3E0D5BDF-FFA1-4002-8819-C2C4EBC0BA21} = {A95F154F-913C-45E8-AD8D-93D6C9C46C54}
 		{69CD983F-2C44-4DFE-A671-CE4074A131EB} = {A95F154F-913C-45E8-AD8D-93D6C9C46C54}
 		{A69884F2-D8C3-486D-8C32-C42C45C26D2E} = {A95F154F-913C-45E8-AD8D-93D6C9C46C54}
