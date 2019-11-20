@@ -32,6 +32,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Editor, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Language.Intellisense, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Language.StandardClassification, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Text.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.Logic, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.UI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +56,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vs15AssemblyResolver.cs" />
+    <Compile Include="VsEditorHost.cs" />
+    <Compile Include="VsSolutionTest.cs" />
+    <Compile Include="VsTestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -54,6 +71,28 @@
     <Folder Include="Rainbow\" />
     <Folder Include="Settings\" />
     <Folder Include="StringScanners\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BracketPairColorizer.Core\BracketPairColorizer.Core.csproj">
+      <Project>{3e0d5bdf-ffa1-4002-8819-c2c4ebc0ba21}</Project>
+      <Name>BracketPairColorizer.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BracketPairColorizer.Languages\BracketPairColorizer.Languages.csproj">
+      <Project>{69cd983f-2c44-4dfe-a671-ce4074a131eb}</Project>
+      <Name>BracketPairColorizer.Languages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BracketPairColorizer.Rainbow\BracketPairColorizer.Rainbow.csproj">
+      <Project>{a69884f2-d8c3-486d-8c32-c42c45c26d2e}</Project>
+      <Name>BracketPairColorizer.Rainbow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BracketPairColorizer.Settings\BracketPairColorizer.Settings.csproj">
+      <Project>{3591c3fa-ef02-4558-ba6e-6bb3d6695eec}</Project>
+      <Name>BracketPairColorizer.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BracketPairColorizer.Xml\BracketPairColorizer.Xml.csproj">
+      <Project>{b1637137-4410-4a0a-8431-69e43eedecfd}</Project>
+      <Name>BracketPairColorizer.Xml</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
