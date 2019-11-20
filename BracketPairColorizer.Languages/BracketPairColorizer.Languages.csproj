@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharExtensions.cs" />
+    <Compile Include="CommentParsers\GenericCommentParser.cs" />
     <Compile Include="Lang\Cpp.cs" />
     <Compile Include="Lang\CSharp.cs" />
     <Compile Include="Lang\Css.cs" />
@@ -51,11 +53,18 @@
     <Compile Include="Lang\Json.cs" />
     <Compile Include="Lang\PowerShell.cs" />
     <Compile Include="Lang\Python.cs" />
-    <Compile Include="Lang\RSharp.cs" />
+    <Compile Include="Lang\R.cs" />
     <Compile Include="Lang\Sql.cs" />
     <Compile Include="Lang\TypeScript.cs" />
     <Compile Include="Lang\VisualBasic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sequences\BasicCStringScanner.cs" />
+    <Compile Include="Sequences\CSharpsStringScanner.cs" />
+    <Compile Include="Sequences\CssStringScanner.cs" />
+    <Compile Include="Sequences\CStringScanner.cs" />
+    <Compile Include="Sequences\FSharpStringScanner.cs" />
+    <Compile Include="Sequences\PowerShellStringScanner.cs" />
+    <Compile Include="Sequences\RStringScanner.cs" />
     <Compile Include="Utilities\IFirstLineCommentParser.cs" />
     <Compile Include="Utilities\IModeLineParser.cs" />
     <Compile Include="Utilities\IStringScanner.cs" />
@@ -70,8 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BraceScanners\" />
-    <Folder Include="CommentParsers\" />
-    <Folder Include="Sequences\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,70 @@
+﻿using BracketPairColorizer.Languages.Utilities;
+using System;
+
+namespace BracketPairColorizer.Languages.Sequences
+{
+    public class RStringScanner : IStringScanner
+    {
+        protected ITextChars text;
+
+        public RStringScanner(string text)
+        {
+            this.text = new StringChars(text, 0, text.Length - 1);
+            // always skip the first char
+            // (since quotes are included in the string)
+            this.text.Next();
+        }
+
+        public StringPart? Next()
+        {
+            while (!this.text.AtEnd)
+            {
+                if (this.text.Char() == '\\')
+                {
+                    return ParseEscapeSequence(this.text);
+                }
+
+                this.text.Next();
+            }
+
+            return null;
+        }
+
+        internal static StringPart ParseEscapeSequence(ITextChars text)
+        {
+            int start = text.Position;
+            int len = 1;
+            text.Next();
+
+            int maxlen = Int32.MaxValue;
+
+            char f = text.Char();
+            text.Next();
+
+            if ((f == 'x' || f == 'u' || f == 'U') && text.Char() != '{')
+            {
+                if (f == 'x') maxlen = 3;
+                else if (f == 'u') maxlen = 5;
+                else if (f == 'U') maxlen = 9;
+
+                while (text.Char().IsHexDigit() && len < maxlen)
+                {
+                    text.Next();
+                    len++;
+                }
+            } else if ((f == 'u' || f == 'U') && text.Char() == '{')
+            {
+                len++;
+                while (text.Char() != '}' && !text.AtEnd)
+                {
+                    text.Next();
+                    len++;
+                }
+            }
+
+            var span = new TextSpan(start, len + 1);
+
+            return new StringPart(span, StringPartType.EscapeSequence);
+        }
+    }
+}
