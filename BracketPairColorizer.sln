@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{A95F15
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3BE94698-D781-4CB2-9B5A-C67CE8AB041C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BracketPairColorizer.Xml", "BracketPairColorizer.Xml\BracketPairColorizer.Xml.csproj", "{B1637137-4410-4A0A-8431-69E43EEDECFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{1395832B-0D1C-422D-AECD-6DDFCBF83298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1395832B-0D1C-422D-AECD-6DDFCBF83298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1395832B-0D1C-422D-AECD-6DDFCBF83298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1637137-4410-4A0A-8431-69E43EEDECFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1637137-4410-4A0A-8431-69E43EEDECFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1637137-4410-4A0A-8431-69E43EEDECFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1637137-4410-4A0A-8431-69E43EEDECFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{A69884F2-D8C3-486D-8C32-C42C45C26D2E} = {A95F154F-913C-45E8-AD8D-93D6C9C46C54}
 		{3591C3FA-EF02-4558-BA6E-6BB3D6695EEC} = {A95F154F-913C-45E8-AD8D-93D6C9C46C54}
 		{1395832B-0D1C-422D-AECD-6DDFCBF83298} = {3BE94698-D781-4CB2-9B5A-C67CE8AB041C}
+		{B1637137-4410-4A0A-8431-69E43EEDECFD} = {A95F154F-913C-45E8-AD8D-93D6C9C46C54}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5F4F6CC-086B-4494-9B73-713A251EDAC7}
