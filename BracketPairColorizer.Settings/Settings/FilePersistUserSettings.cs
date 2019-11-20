@@ -10,7 +10,7 @@ namespace BracketPairColorizer.Settings.Settings
         public FilePersistUserSettings(string location)
         {
             string path = Path.GetFullPath(location);
-            if ( !string.IsNullOrEmpty(Path.GetExtension(path)) )
+            if (!string.IsNullOrEmpty(Path.GetExtension(path)))
             {
                 path = Path.GetDirectoryName(path);
             }
@@ -25,7 +25,7 @@ namespace BracketPairColorizer.Settings.Settings
 
         public byte[] Read()
         {
-            if ( !SettingsFileExists() )
+            if (!SettingsFileExists())
             {
                 return null;
             }

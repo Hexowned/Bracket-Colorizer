@@ -14,7 +14,7 @@ namespace BracketPairColorizer.Tests
         static Vs15AssemblyResolverFixture()
         {
             vsInstallDirectory = TryFindVs15InstallDirectory();
-            if ( !string.IsNullOrEmpty(vsInstallDirectory) )
+            if (!string.IsNullOrEmpty(vsInstallDirectory))
             {
                 assemblyLocations = new string[]
                 {
@@ -30,13 +30,13 @@ namespace BracketPairColorizer.Tests
         private static string TryFindVs15InstallDirectory()
         {
             var setupConfiguration = GetVsConfiguration();
-            if ( setupConfiguration != null )
+            if (setupConfiguration != null)
             {
                 var instances = setupConfiguration.EnumInstances();
                 ISetupInstance[] idata = new ISetupInstance[1];
                 int numberFetch = 0;
                 instances.Next(1, idata, out numberFetch);
-                if ( numberFetch > 0 )
+                if (numberFetch > 0)
                 {
                     return idata[0].GetInstallationPath();
                 }
@@ -50,7 +50,7 @@ namespace BracketPairColorizer.Tests
             try
             {
                 return new SetupConfiguration();
-            } catch ( COMException ex ) when ( ex.HResult == REDFB_E_CLASSNOTREG )
+            } catch (COMException ex) when (ex.HResult == REDFB_E_CLASSNOTREG)
             {
                 try
                 {
@@ -58,7 +58,7 @@ namespace BracketPairColorizer.Tests
                     var result = GetSetupConfiguration(out setupConfiguration, IntPtr.Zero);
 
                     return result < 0 ? null : setupConfiguration;
-                } catch ( DllNotFoundException )
+                } catch (DllNotFoundException)
                 {
                     return null;
                 }
@@ -68,10 +68,10 @@ namespace BracketPairColorizer.Tests
         private static Assembly OnAssemblyResolve(object sender, ResolveEventArgs args)
         {
             var name = new AssemblyName(args.Name);
-            foreach ( string directory in assemblyLocations )
+            foreach (string directory in assemblyLocations)
             {
                 string path = Path.Combine(directory, name.Name + ".dll");
-                if ( File.Exists(path) )
+                if (File.Exists(path))
                 {
                     return Assembly.LoadFrom(path);
                 }

@@ -7,7 +7,7 @@ namespace BracketPairColorizer.Settings
     {
         public static bool ReadExpected(this JsonTextReader reader, JsonToken expected)
         {
-            if ( reader.Read() )
+            if (reader.Read())
             {
                 return reader.TokenType == expected;
             }
@@ -37,7 +37,7 @@ namespace BracketPairColorizer.Settings
 
         public static string ReadPropertyName(this JsonTextReader reader)
         {
-            if ( reader.ReadExpected(JsonToken.PropertyName) )
+            if (reader.ReadExpected(JsonToken.PropertyName))
             {
                 return reader.Value as string;
             }
@@ -49,7 +49,7 @@ namespace BracketPairColorizer.Settings
         {
             var list = JsonConvert.DeserializeObject<List<T>>(json);
 
-            if ( list == null ) { list = new List<T>(); }
+            if (list == null) { list = new List<T>(); }
 
             return list;
         }

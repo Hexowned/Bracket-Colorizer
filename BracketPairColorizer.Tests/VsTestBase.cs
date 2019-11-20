@@ -17,7 +17,7 @@ namespace BracketPairColorizer.Tests
 
         public VsTestBase()
         {
-            if ( Application.Current == null )
+            if (Application.Current == null)
             {
                 new Application();
             }
@@ -30,10 +30,10 @@ namespace BracketPairColorizer.Tests
             Assembly assembly = this.GetType().Assembly;
             var stream = assembly.GetManifestResourceStream(name);
             IList<string> lines = new List<string>();
-            using ( var reader = new StreamReader(stream) )
+            using (var reader = new StreamReader(stream))
             {
                 string line = null;
-                while ( (line = reader.ReadLine()) != null )
+                while ((line = reader.ReadLine()) != null)
                 {
                     lines.Add(line);
                 }
@@ -65,7 +65,7 @@ namespace BracketPairColorizer.Tests
 
         private VsEditorHost GetOrCreateEditorHost()
         {
-            if ( cachedEditorHost == null )
+            if (cachedEditorHost == null)
             {
                 var editorHostFactory = new EditorHostFactory();
                 var catalog = new AggregateCatalog(

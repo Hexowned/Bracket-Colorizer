@@ -59,6 +59,7 @@
     <Compile Include="Settings\IStorageConversions.cs" />
     <Compile Include="Settings\ITypedSettingsStore.cs" />
     <Compile Include="Settings\IUpdatableSettings.cs" />
+    <Compile Include="Settings\OutlineSettings.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
