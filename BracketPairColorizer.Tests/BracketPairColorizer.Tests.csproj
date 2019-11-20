@@ -47,5 +47,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BraceScanners\" />
+    <Folder Include="CommentScanners\" />
+    <Folder Include="Outlining\" />
+    <Folder Include="Rainbow\" />
+    <Folder Include="Settings\" />
+    <Folder Include="StringScanners\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
