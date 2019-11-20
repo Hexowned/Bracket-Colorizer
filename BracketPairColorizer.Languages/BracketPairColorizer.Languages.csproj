@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,8 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BraceScanners\CBraceScanner.cs" />
+    <Compile Include="BraceScanners\IBraceScanner.cs" />
+    <Compile Include="CBasedLanguage.cs" />
     <Compile Include="CharExtensions.cs" />
+    <Compile Include="CharPosition.cs" />
     <Compile Include="CommentParsers\GenericCommentParser.cs" />
+    <Compile Include="DefaultLanguage.cs" />
+    <Compile Include="ILanguage.cs" />
+    <Compile Include="ILanguageFactory.cs" />
+    <Compile Include="ILanguageSettings.cs" />
+    <Compile Include="LanguageFactory.cs" />
+    <Compile Include="LanguageInfo.cs" />
+    <Compile Include="LanguageSettings.cs" />
     <Compile Include="Lang\Cpp.cs" />
     <Compile Include="Lang\CSharp.cs" />
     <Compile Include="Lang\Css.cs" />
@@ -78,7 +90,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BraceScanners\" />
+    <ProjectReference Include="..\BracketPairColorizer.Settings\BracketPairColorizer.Settings.csproj">
+      <Project>{3591C3FA-EF02-4558-BA6E-6BB3D6695EEC}</Project>
+      <Name>BracketPairColorizer.Settings</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

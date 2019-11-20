@@ -9,5 +9,6 @@
         void Load();
 
         void Save();
+        void Set(string name, object value);
     }
 }
