@@ -42,10 +42,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lang\Cpp.cs" />
+    <Compile Include="Lang\CSharp.cs" />
+    <Compile Include="Lang\Css.cs" />
+    <Compile Include="Lang\Fortran.cs" />
+    <Compile Include="Lang\FSharp.cs" />
+    <Compile Include="Lang\JavaScript.cs" />
+    <Compile Include="Lang\Json.cs" />
+    <Compile Include="Lang\PowerShell.cs" />
+    <Compile Include="Lang\Python.cs" />
+    <Compile Include="Lang\RSharp.cs" />
+    <Compile Include="Lang\Sql.cs" />
+    <Compile Include="Lang\TypeScript.cs" />
+    <Compile Include="Lang\VisualBasic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\IFirstLineCommentParser.cs" />
+    <Compile Include="Utilities\IModeLineParser.cs" />
+    <Compile Include="Utilities\IStringScanner.cs" />
+    <Compile Include="Utilities\ITextChars.cs" />
+    <Compile Include="Utilities\StringChars.cs" />
+    <Compile Include="Utilities\StringPart.cs" />
+    <Compile Include="Utilities\StringPartType.cs" />
+    <Compile Include="Utilities\TextSpan.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BraceScanners\" />
+    <Folder Include="CommentParsers\" />
+    <Folder Include="Sequences\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
