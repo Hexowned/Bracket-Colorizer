@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BraceScanners\CBraceScanner.cs" />
+    <Compile Include="BraceScanners\CSharpBraceScanner.cs" />
     <Compile Include="BraceScanners\IBraceScanner.cs" />
     <Compile Include="CBasedLanguage.cs" />
     <Compile Include="CharExtensions.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="ILanguage.cs" />
     <Compile Include="ILanguageFactory.cs" />
     <Compile Include="ILanguageSettings.cs" />
+    <Compile Include="IResumeControl.cs" />
     <Compile Include="LanguageFactory.cs" />
     <Compile Include="LanguageInfo.cs" />
     <Compile Include="LanguageSettings.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="Lang\FSharp.cs" />
     <Compile Include="Lang\JavaScript.cs" />
     <Compile Include="Lang\Json.cs" />
+    <Compile Include="Lang\Langs.cs" />
     <Compile Include="Lang\PowerShell.cs" />
     <Compile Include="Lang\Python.cs" />
     <Compile Include="Lang\R.cs" />
@@ -85,6 +88,7 @@
     <Compile Include="Utilities\StringPart.cs" />
     <Compile Include="Utilities\StringPartType.cs" />
     <Compile Include="Utilities\TextSpan.cs" />
+    <Compile Include="XLang.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
