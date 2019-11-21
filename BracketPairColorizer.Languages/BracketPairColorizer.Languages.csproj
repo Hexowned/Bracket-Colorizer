@@ -96,7 +96,7 @@
     <Compile Include="Utilities\IModeLineParser.cs" />
     <Compile Include="Utilities\IStringScanner.cs" />
     <Compile Include="Utilities\ITextChars.cs" />
-    <Compile Include="Utilities\StringChars.cs" />
+    <Compile Include="Utilities\StringCharacters.cs" />
     <Compile Include="Utilities\StringPart.cs" />
     <Compile Include="Utilities\StringPartType.cs" />
     <Compile Include="Utilities\TextSpan.cs" />

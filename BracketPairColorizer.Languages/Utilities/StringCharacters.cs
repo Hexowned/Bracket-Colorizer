@@ -2,7 +2,7 @@
 
 namespace BracketPairColorizer.Languages.Utilities
 {
-    public class StringChars : ITextChars
+    public class StringCharacters : ITextChars
     {
         private string text;
         private int position;
@@ -16,7 +16,7 @@ namespace BracketPairColorizer.Languages.Utilities
         public bool AtEnd => position >= length;
         public virtual int End => Position + length;
 
-        public StringChars(string text, int start = 0, int len = -1)
+        public StringCharacters(string text, int start = 0, int len = -1)
         {
             this.text = text;
             this.length = len < 0 ? text.Length : Math.Min(text.Length, len);

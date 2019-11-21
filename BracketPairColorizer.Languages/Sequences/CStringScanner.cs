@@ -9,7 +9,7 @@ namespace BracketPairColorizer.Languages.Sequences
 
         public CStringScanner(string text)
         {
-            this.text = new StringChars(text, 0, text.Length - 1);
+            this.text = new StringCharacters(text, 0, text.Length - 1);
             // If it's a C preprocessor include
             // skip it
             if (this.text.Char() == '<')

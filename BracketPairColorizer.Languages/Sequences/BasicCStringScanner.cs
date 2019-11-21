@@ -9,7 +9,7 @@ namespace BracketPairColorizer.Languages.Sequences
 
         public BasicCStringScanner(string text)
         {
-            this.text = new StringChars(text, 0, text.Length);
+            this.text = new StringCharacters(text, 0, text.Length);
             // only skip the first char if it's a quote
             // vs2017 does not, can break the token and parse it in partial chunks
             if (this.text.Char() == '\'' || this.text.Char() == '"')

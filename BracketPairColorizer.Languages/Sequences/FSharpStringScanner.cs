@@ -9,7 +9,7 @@ namespace BracketPairColorizer.Languages.Sequences
 
         public FSharpStringScanner(string theText)
         {
-            this.text = new StringChars(theText);
+            this.text = new StringCharacters(theText);
 
             if (theText.StartsWith("\"\"\"") || theText.StartsWith("@"))
             {

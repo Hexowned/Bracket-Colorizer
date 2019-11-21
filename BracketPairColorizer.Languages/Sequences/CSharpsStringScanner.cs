@@ -10,7 +10,7 @@ namespace BracketPairColorizer.Languages.Sequences
 
         public CSharpsStringScanner(string text, string classificationName = "string")
         {
-            this.text = new StringChars(text, 0, text.Length - 1);
+            this.text = new StringCharacters(text, 0, text.Length - 1);
             this.isVerbatim = classificationName == "string - verbatim";
             //  If this is an at-string, skip it
             char first = this.text.Char();

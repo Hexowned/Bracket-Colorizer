@@ -9,7 +9,7 @@ namespace BracketPairColorizer.Languages.Sequences
 
         public RStringScanner(string text)
         {
-            this.text = new StringChars(text, 0, text.Length - 1);
+            this.text = new StringCharacters(text, 0, text.Length - 1);
             // always skip the first char
             // (since quotes are included in the string)
             this.text.Next();
