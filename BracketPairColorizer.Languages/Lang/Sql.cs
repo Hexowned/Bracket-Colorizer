@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BracketPairColorizer.Languages.Lang
+﻿namespace BracketPairColorizer.Languages.Lang
 {
-    class Sql
+    internal class SQL
     {
     }
 }

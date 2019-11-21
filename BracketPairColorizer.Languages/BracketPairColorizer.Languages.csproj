@@ -45,7 +45,18 @@
   <ItemGroup>
     <Compile Include="BraceScanners\CBraceScanner.cs" />
     <Compile Include="BraceScanners\CSharpBraceScanner.cs" />
+    <Compile Include="BraceScanners\CssBraceScanner.cs" />
+    <Compile Include="BraceScanners\DefaultBraceScanner.cs" />
+    <Compile Include="BraceScanners\FortranBraceScanner.cs" />
+    <Compile Include="BraceScanners\FSharpBraceScanner.cs" />
     <Compile Include="BraceScanners\IBraceScanner.cs" />
+    <Compile Include="BraceScanners\JavaScriptBraceScanner.cs" />
+    <Compile Include="BraceScanners\PowerShellBraceScanner.cs" />
+    <Compile Include="BraceScanners\PythonBraceScanner.cs" />
+    <Compile Include="BraceScanners\RBraceScanner.cs" />
+    <Compile Include="BraceScanners\SQLBraceScanner.cs" />
+    <Compile Include="BraceScanners\USQLBraceScanner.cs" />
+    <Compile Include="BraceScanners\VisualBasicBraceScanner.cs" />
     <Compile Include="CBasedLanguage.cs" />
     <Compile Include="CharExtensions.cs" />
     <Compile Include="CharPosition.cs" />
@@ -69,9 +80,10 @@
     <Compile Include="Lang\PowerShell.cs" />
     <Compile Include="Lang\Python.cs" />
     <Compile Include="Lang\R.cs" />
-    <Compile Include="Lang\Sql.cs" />
+    <Compile Include="Lang\SQL.cs" />
     <Compile Include="Lang\TypeScript.cs" />
     <Compile Include="Lang\VisualBasic.cs" />
+    <Compile Include="Properties\AssemblyInfo.Common.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\BasicCStringScanner.cs" />
     <Compile Include="Sequences\CSharpsStringScanner.cs" />
