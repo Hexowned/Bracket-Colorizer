@@ -81,8 +81,8 @@
     <Compile Include="BracePosition.cs" />
     <Compile Include="Classifications\RainbowClassifications.cs" />
     <Compile Include="Classifications\Rainbows.cs" />
-    <Compile Include="Design\QuickInfoPresenter.xaml.cs">
-      <DependentUpon>QuickInfoPresenter.xaml</DependentUpon>
+    <Compile Include="Design\InfoPresenter.xaml.cs">
+      <DependentUpon>InfoPresenter.xaml</DependentUpon>
     </Compile>
     <Compile Include="EditorFormats\RainbowFormats.cs" />
     <Compile Include="IBraceStacker.cs" />
@@ -115,7 +115,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Design\InfoPresenter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BracketPairColorizer.Core\BracketPairColorizer.Core.csproj">
       <Project>{3E0D5BDF-FFA1-4002-8819-C2C4EBC0BA21}</Project>
@@ -129,11 +134,6 @@
       <Project>{3591C3FA-EF02-4558-BA6E-6BB3D6695EEC}</Project>
       <Name>BracketPairColorizer.Settings</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Design\QuickInfoPresenter.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

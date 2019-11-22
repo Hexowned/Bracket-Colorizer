@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Editor;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -12,9 +11,9 @@ using System.Windows.Media;
 namespace BracketPairColorizer.Rainbow.Design
 {
     /// <summary>
-    /// Interaction logic for QuickInfoPresenterxaml.xaml
+    /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class QuickInfoPresenter : UserControl
+    public partial class InfoPresenter : UserControl
     {
         public ObservableCollection<object> DataSource { get; private set; }
 
@@ -22,7 +21,7 @@ namespace BracketPairColorizer.Rainbow.Design
         public ITextEditorFactoryService EditorFactory { get; set; }
         private List<IWpfTextView> viewsToRelease;
 
-        public QuickInfoPresenter()
+        public InfoPresenter()
         {
             InitializeComponent();
         }
@@ -43,8 +42,10 @@ namespace BracketPairColorizer.Rainbow.Design
                     view.Close();
                 } catch
                 {
+                    // swallow
                 }
             }
+
             this.viewsToRelease.Clear();
         }
 
@@ -52,18 +53,21 @@ namespace BracketPairColorizer.Rainbow.Design
         {
             if (entry is IWpfTextView)
             {
-                Border border = new Border();
+                var border = new Border();
                 border.Child = ((IWpfTextView)entry).VisualElement;
+
                 return border;
             } else if (entry is ITextBuffer)
             {
                 return CreateViewForBuffer((ITextBuffer)entry);
-            } else if (entry is String)
+            } else if (entry is string)
             {
                 var tb = new TextBlock();
-                tb.Text = (String)entry;
+                tb.Text = (string)entry;
+
                 return tb;
             }
+
             return (UIElement)entry;
         }
 
@@ -73,19 +77,15 @@ namespace BracketPairColorizer.Rainbow.Design
             var roles = this.EditorFactory.CreateTextViewRoleSet("");
             var view = this.EditorFactory.CreateTextView(entry, roles, options);
 
-            // make the tooltip be formatted using the "Editor ToolTip" category
-            view.Options.SetOptionValue(
-              DefaultWpfViewOptions.AppearanceCategory,
-              FontsAndColorsCategories.ToolTipFontAndColorCategory
-            );
-
+            view.Options.SetOptionValue(DefaultWpfViewOptions.AppearanceCategory, FontsAndColorsCategories.ToolTipFontAndColorCategory);
             view.Background = Brushes.Transparent;
             this.viewsToRelease.Add(view);
 
-            Border border = new AutoSizeContainer();
+            var border = new AutoSizeContainer();
             border.Background = Brushes.Transparent;
             border.Child = view.VisualElement;
             border.Margin = new Thickness(5, 3, 5, 3);
+
             return border;
         }
     }
@@ -99,16 +99,14 @@ namespace BracketPairColorizer.Rainbow.Design
             IWpfTextView view = Child as IWpfTextView;
             if (view != null)
             {
-                // this is an ugly hack, but not sure how
-                // to actually ask the IWpfTextView
-                // how much space it would need to render content
-                desiredSize = new Size(
-                  desiredSize.Width,
-                  view.LineHeight * view.VisualSnapshot.LineCount +
-                  this.BorderThickness.Top + this.BorderThickness.Bottom +
-                  this.Margin.Top + this.Margin.Bottom
-                  );
+                desiredSize = new Size(desiredSize.Width, view.LineHeight
+                    * view.VisualSnapshot.LineCount
+                    + this.BorderThickness.Top
+                    + this.BorderThickness.Bottom
+                    + this.Margin.Top
+                    + this.Margin.Bottom);
             }
+
             return desiredSize;
         }
     }
@@ -120,9 +118,7 @@ namespace BracketPairColorizer.Rainbow.Design
         private BulkObservableCollection<object> source;
         private TranslateFunc translator;
 
-        public ShadowedBOCollection(
-              BulkObservableCollection<object> originalSource,
-              TranslateFunc translation)
+        public ShadowedBOCollection(BulkObservableCollection<object> originalSource, TranslateFunc translation)
         {
             this.source = originalSource;
             this.source.CollectionChanged += OnSourceModified;
@@ -143,6 +139,7 @@ namespace BracketPairColorizer.Rainbow.Design
             {
                 this.Add(translator(entry));
             }
+
             this.EndBulkOperation();
         }
     }
