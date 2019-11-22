@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classifications\CodeClassificationDefinitions.cs" />
+    <Compile Include="Compatibility\SComponentModel.cs" />
     <Compile Include="Contracts\ILogger.cs" />
     <Compile Include="Contracts\IPresentationModeState.cs" />
     <Compile Include="Contracts\IVsFeatures.cs" />
@@ -89,10 +90,12 @@
     <Compile Include="Properties\AssemblyInfo.Common.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\IVsfSettings.cs" />
+    <Compile Include="Settings\SettingsContext.cs" />
     <Compile Include="Settings\VsfSettingEventManager.cs" />
     <Compile Include="Settings\VsfSettings.cs" />
     <Compile Include="Tags\KeywordTag.cs" />
     <Compile Include="Tags\KeywordTaggerProvider.cs" />
+    <Compile Include="Tags\ObfuscatedTextTag.cs" />
     <Compile Include="Tags\RainbowTag.cs" />
     <Compile Include="Text\BoldAsItalics.cs" />
     <Compile Include="Text\ColumnStyles.cs" />
@@ -111,6 +114,7 @@
     <Compile Include="Text\TextObfuscation.cs" />
     <Compile Include="Utilities\ITokenizer.cs" />
     <Compile Include="Utilities\LineCharacters.cs" />
+    <Compile Include="Utilities\RegexEntry.cs" />
     <Compile Include="Utilities\SimpleTokenizer.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -128,7 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Compatibility\" />
     <Folder Include="Design\" />
     <Folder Include="EditorFormats\" />
     <Folder Include="Resources\" />

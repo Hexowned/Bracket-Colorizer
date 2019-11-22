@@ -8,7 +8,7 @@ namespace BracketPairColorizer.Core.Contracts
 
         bool PresentationModeTurnedOn { get; }
 
-        void ToggledPresentationMode();
+        void TogglePresentationMode();
 
         void TurnOff(bool notifyChanges);
 
