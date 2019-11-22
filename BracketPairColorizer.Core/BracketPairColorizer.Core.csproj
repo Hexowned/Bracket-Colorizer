@@ -156,6 +156,8 @@
     <Compile Include="Utilities\VsActivityLogger.cs" />
     <Compile Include="Utilities\VsColors.cs" />
     <Compile Include="Utilities\VsFeatures.cs" />
+    <Compile Include="XLangSupport\FakeContentTypeDefinition.cs" />
+    <Compile Include="XLangSupport\XLangTextViewCreationListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -174,7 +176,6 @@
     <Folder Include="Commands\" />
     <Folder Include="Design\" />
     <Folder Include="Resources\" />
-    <Folder Include="XLangSupport\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Margins\DevMarginVisual.xaml">
