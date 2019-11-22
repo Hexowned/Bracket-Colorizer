@@ -104,6 +104,11 @@
     <Compile Include="Text\ModeLineFactory.cs" />
     <Compile Include="Text\ModeLineParser.cs" />
     <Compile Include="Text\ModeLineProvider.cs" />
+    <Compile Include="Text\PresentationMode.cs" />
+    <Compile Include="Text\PresentationModeFactory.cs" />
+    <Compile Include="Text\PresentationModeFontChanger.cs" />
+    <Compile Include="Text\PresentationModeState.cs" />
+    <Compile Include="Text\TextObfuscation.cs" />
     <Compile Include="Utilities\ITokenizer.cs" />
     <Compile Include="Utilities\LineCharacters.cs" />
     <Compile Include="Utilities\SimpleTokenizer.cs" />
