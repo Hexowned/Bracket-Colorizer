@@ -81,6 +81,15 @@
     <Compile Include="Contracts\IPresentationModeState.cs" />
     <Compile Include="Contracts\IVsFeatures.cs" />
     <Compile Include="Contracts\IVsfTelemetry.cs" />
+    <Compile Include="EditorFormats\CurrentColumnFormat.cs" />
+    <Compile Include="EditorFormats\CurrentLineFormat.cs" />
+    <Compile Include="EditorFormats\FlowControlFormat.cs" />
+    <Compile Include="EditorFormats\FormatSpecifierFormat.cs" />
+    <Compile Include="EditorFormats\LinqKeywordFormat.cs" />
+    <Compile Include="EditorFormats\ObfuscatedTextFormat.cs" />
+    <Compile Include="EditorFormats\StringEscapeSequenceErrorFormat.cs" />
+    <Compile Include="EditorFormats\StringEscapeSequenceFormat.cs" />
+    <Compile Include="EditorFormats\VisibilityKeywordFormat.cs" />
     <Compile Include="Margins\DevMarginProvider.cs" />
     <Compile Include="Margins\DevMarginViewModel.cs" />
     <Compile Include="Margins\DevViewMargin.cs" />
@@ -139,7 +148,6 @@
   <ItemGroup>
     <Folder Include="Commands\" />
     <Folder Include="Design\" />
-    <Folder Include="EditorFormats\" />
     <Folder Include="Resources\" />
     <Folder Include="XLangSupport\" />
   </ItemGroup>
