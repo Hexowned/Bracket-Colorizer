@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace BracketPairColorizer.Rainbow
 {
-    public class PerBracketStacker : IBraceStacker
+    public class PerBraceStacker : IBraceStacker
     {
         private string braceList;
         private Dictionary<char, Stack<BracePosition>> stack;
 
-        public PerBracketStacker(string braceList)
+        public PerBraceStacker(string braceList)
         {
             this.braceList = braceList;
             this.stack = new Dictionary<char, Stack<BracePosition>>();

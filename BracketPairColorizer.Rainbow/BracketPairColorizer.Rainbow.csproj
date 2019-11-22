@@ -88,7 +88,7 @@
     <Compile Include="IBraceStacker.cs" />
     <Compile Include="ITextBufferBraces.cs" />
     <Compile Include="ITextLinesSource.cs" />
-    <Compile Include="PerBracketStacker.cs" />
+    <Compile Include="PerBraceStacker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RainbowColorTagger.cs" />
     <Compile Include="RainbowCommandHandler.cs" />
