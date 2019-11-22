@@ -21,10 +21,10 @@ namespace BracketPairColorizer.Core.Settings
         bool PresentationModeEnabled { get; set; }
         int PresentationModeDefaultZoom { get; set; }
         int PresentationModeEnabledZoom { get; set; }
-        bool PresentationModeIncludeEnvFonts { get; set; }
+        bool PresentationModeIncludeEnvironmentFonts { get; set; }
 
         bool ModelinesEnabled { get; set; }
-        int ModelinesNumLines { get; set; }
+        int ModelinesNumberLines { get; set; }
 
         bool DeveloperMarginEnabled { get; set; }
         Outlining.AutoExpandMode AutoExpandRegions { get; set; }

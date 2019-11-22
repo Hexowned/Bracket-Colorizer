@@ -92,7 +92,11 @@
     <Compile Include="Settings\VsfSettingEventManager.cs" />
     <Compile Include="Settings\VsfSettings.cs" />
     <Compile Include="Tags\RainbowTag.cs" />
-    <Compile Include="Text\ColumnStyle.cs" />
+    <Compile Include="Text\BoldAsItalics.cs" />
+    <Compile Include="Text\ColumnStyles.cs" />
+    <Compile Include="Text\CurrentColumnAdornment.cs" />
+    <Compile Include="Text\CurrentColumnAdornmentFactory.cs" />
+    <Compile Include="Text\CurrentLineAdornment.cs" />
     <Compile Include="Utilities\ITokenizer.cs" />
     <Compile Include="Utilities\LineCharacters.cs" />
   </ItemGroup>

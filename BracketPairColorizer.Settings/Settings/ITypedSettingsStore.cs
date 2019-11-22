@@ -10,7 +10,7 @@
 
         long GetInt64(string name, long defaultValue);
 
-        double GetDouble(string name, long defaultValue);
+        double GetDouble(string name, double defaultValue);
 
         T GetEnum<T>(string name, T defaultValue) where T : struct;
 
