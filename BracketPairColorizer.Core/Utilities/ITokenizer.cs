@@ -4,6 +4,7 @@
     {
         bool AtEnd { get; }
         string Token { get; }
-        bool Next { get; }
+
+        bool Next();
     }
 }

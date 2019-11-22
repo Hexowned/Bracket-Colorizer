@@ -91,14 +91,22 @@
     <Compile Include="Settings\IVsfSettings.cs" />
     <Compile Include="Settings\VsfSettingEventManager.cs" />
     <Compile Include="Settings\VsfSettings.cs" />
+    <Compile Include="Tags\KeywordTag.cs" />
+    <Compile Include="Tags\KeywordTaggerProvider.cs" />
     <Compile Include="Tags\RainbowTag.cs" />
     <Compile Include="Text\BoldAsItalics.cs" />
     <Compile Include="Text\ColumnStyles.cs" />
     <Compile Include="Text\CurrentColumnAdornment.cs" />
     <Compile Include="Text\CurrentColumnAdornmentFactory.cs" />
     <Compile Include="Text\CurrentLineAdornment.cs" />
+    <Compile Include="Tags\KeywordTagger.cs" />
+    <Compile Include="Text\IModeLineParser.cs" />
+    <Compile Include="Text\ModeLineFactory.cs" />
+    <Compile Include="Text\ModeLineParser.cs" />
+    <Compile Include="Text\ModeLineProvider.cs" />
     <Compile Include="Utilities\ITokenizer.cs" />
     <Compile Include="Utilities\LineCharacters.cs" />
+    <Compile Include="Utilities\SimpleTokenizer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
