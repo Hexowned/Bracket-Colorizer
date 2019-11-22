@@ -16,7 +16,7 @@ namespace BracketPairColorizer.Core.Text
         public event EventHandler PresentationModeChanged;
 
         [ImportingConstructor]
-        public IPresentationModeState(IVsfSettings settingsManager, IVsfTelemetry telemetry)
+        public PresentationModeState(IVsfSettings settingsManager, IVsfTelemetry telemetry)
         {
             this.fontChanger = new PresentationModeFontChanger(this);
             this.settings = settingsManager;
