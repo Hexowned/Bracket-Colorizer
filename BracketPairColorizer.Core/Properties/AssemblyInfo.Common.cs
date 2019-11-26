@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion(VsfVersion.Version)]
+[assembly: AssemblyFileVersion(BpcVersion.Version)]
 
-internal static class VsfVersion
+internal static class BpcVersion
 {
     public const string Version = "1.0.0.0";
 }

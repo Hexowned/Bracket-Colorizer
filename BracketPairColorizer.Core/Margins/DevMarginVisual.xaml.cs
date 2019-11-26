@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BracketPairColorizer.Core.Settings;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
@@ -11,7 +12,7 @@ namespace BracketPairColorizer.Core.Margins
     public partial class DevMarginVisual : UserControl
     {
         public DevMarginViewModel Model { get; private set; }
-        private IVsfSettings settings;
+        private IBpcSettings settings;
 
         public event EventHandler ViewBuffer;
 
@@ -20,7 +21,7 @@ namespace BracketPairColorizer.Core.Margins
             InitializeComponent();
         }
 
-        public DevMarginVisual(DevMarginViewModel model, IVsfSettings settings)
+        public DevMarginVisual(DevMarginViewModel model, IBpcSettings settings)
             : this()
         {
             this.Model = model;
@@ -46,7 +47,7 @@ namespace BracketPairColorizer.Core.Margins
         {
             if (Model.SelectedBuffer != null)
             {
-                this.ContentTypeTreePopip.BringIntoView();
+                this.ContentTypeTreePopup.BringIntoView();
             }
         }
     }

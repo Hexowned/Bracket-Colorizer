@@ -30,7 +30,7 @@ namespace BracketPairColorizer.Core.Tags
         public ILanguageFactory LanguageFactory { get; set; }
 
         [Import]
-        public IVsfSettings Settings { get; set; }
+        public IBpcSettings Settings { get; set; }
 
         public ITagger<T> CreateTagger<T>(ITextView textView, ITextBuffer buffer) where T : ITag
         {
@@ -48,11 +48,11 @@ namespace BracketPairColorizer.Core.Tags
     {
         private ITextView textView;
         private IClassificationFormatMap formatMap;
-        private IVsfSettings settings;
+        private IBpcSettings settings;
         private IList<string> classificationTypes;
         private bool working;
 
-        public ItalicsFormatter(ITextView textView, IClassificationFormatMap map, IVsfSettings settings)
+        public ItalicsFormatter(ITextView textView, IClassificationFormatMap map, IBpcSettings settings)
         {
             this.textView = textView;
             this.formatMap = map;

@@ -5,11 +5,11 @@ namespace BracketPairColorizer.Core.Settings
 {
     public class SettingsContext
     {
-        public static IVsfSettings GetSettings()
+        public static IBpcSettings GetSettings()
         {
             var model = new SComponentModel();
 
-            return model.GetService<IVsfSettings>();
+            return model.GetService<IBpcSettings>();
         }
 
         public static T GetService<T>()

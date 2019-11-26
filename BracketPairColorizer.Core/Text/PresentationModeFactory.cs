@@ -12,7 +12,7 @@ namespace BracketPairColorizer.Core.Text
     public class PresentationModeFactory : IWpfTextViewCreationListener
     {
         [Import]
-        internal IVsfSettings Settings { get; set; }
+        internal IBpcSettings Settings { get; set; }
 
         [Import]
         internal IPresentationModeState State { get; set; }

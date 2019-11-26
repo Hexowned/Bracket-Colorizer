@@ -4,7 +4,7 @@ using System;
 
 namespace BracketPairColorizer.Core.Settings
 {
-    public interface IVsfSettings : IUpdatableSettings
+    public interface IBpcSettings : IUpdatableSettings
     {
         bool KeywordClassifierEnabled { get; set; }
         bool FlowControlKeywordsEnabled { get; set; }

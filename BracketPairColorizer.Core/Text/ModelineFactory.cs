@@ -15,7 +15,7 @@ namespace BracketPairColorizer.Core.Text
         public ILanguageFactory LanguageFactory { get; set; }
 
         [Import]
-        public IVsfSettings Settings { get; set; }
+        public IBpcSettings Settings { get; set; }
 
         public void TextViewCreated(IWpfTextView textView)
         {

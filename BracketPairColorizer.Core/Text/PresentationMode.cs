@@ -8,10 +8,10 @@ namespace BracketPairColorizer.Core.Text
     public class PresentationMode
     {
         private IWpfTextView theView;
-        private IVsfSettings settings;
+        private IBpcSettings settings;
         private IPresentationModeState state;
 
-        public PresentationMode(IWpfTextView textView, IPresentationModeState state, IVsfSettings settings)
+        public PresentationMode(IWpfTextView textView, IPresentationModeState state, IBpcSettings settings)
         {
             this.theView = textView;
             this.settings = settings;

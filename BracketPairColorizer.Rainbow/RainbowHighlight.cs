@@ -80,8 +80,8 @@ namespace BracketPairColorizer.Rainbow
 
         public void Start(SnapshotPoint opening, SnapshotPoint closing, int depth)
         {
-            SnapshotSpan span = new SnapshotSpan(opening, closing);
-            PathGeometry path = BuildSpanGeometry(span);
+            var span = new SnapshotSpan(opening, closing);
+            var path = BuildSpanGeometry(span);
             path = path.GetOutlinedPathGeometry();
 
             var adornment = MakeAdornment(span, path, depth);
@@ -95,7 +95,7 @@ namespace BracketPairColorizer.Rainbow
 
         private PathGeometry BuildSpanGeometry(SnapshotSpan span)
         {
-            PathGeometry path = new PathGeometry();
+            var path = new PathGeometry();
             path.FillRule = FillRule.Nonzero;
             foreach (var line in this.view.TextViewLines)
             {

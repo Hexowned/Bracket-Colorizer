@@ -4,7 +4,7 @@ using System.Windows;
 
 namespace BracketPairColorizer.Core.Settings
 {
-    public class VsfSettingEventManager : WeakEventManager
+    public class BpcSettingEventManager : WeakEventManager
     {
         public static void AddListener(IUpdatableSettings source, IWeakEventListener handler)
         {
@@ -26,16 +26,16 @@ namespace BracketPairColorizer.Core.Settings
             CurrentManager.ProtectedRemoveListener(source, handler);
         }
 
-        private static VsfSettingEventManager CurrentManager
+        private static BpcSettingEventManager CurrentManager
         {
             get
             {
-                var managerType = typeof(VsfSettingEventManager);
-                var manager = (VsfSettingEventManager)GetCurrentManager(managerType);
+                var managerType = typeof(BpcSettingEventManager);
+                var manager = (BpcSettingEventManager)GetCurrentManager(managerType);
 
                 if (manager == null)
                 {
-                    manager = new VsfSettingEventManager();
+                    manager = new BpcSettingEventManager();
                     SetCurrentManager(managerType, manager);
                 }
 

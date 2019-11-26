@@ -18,11 +18,11 @@ namespace BracketPairColorizer.Core.Text
         private IWpfTextView view;
         private IClassificationFormatMap formatMap;
         private IClassificationType formatType;
-        private IVsfSettings settings;
+        private IBpcSettings settings;
         private Rectangle lineRect;
         private Dispatcher dispatcher;
 
-        public CurrentLineAdornment(IWpfTextView view, IClassificationFormatMap formatMap, IClassificationType formatType, IVsfSettings settings)
+        public CurrentLineAdornment(IWpfTextView view, IClassificationFormatMap formatMap, IClassificationType formatType, IBpcSettings settings)
         {
             this.view = view;
             this.formatMap = formatMap;
@@ -107,8 +107,8 @@ namespace BracketPairColorizer.Core.Text
 
         private void OnCaretPositionChanged(object sender, CaretPositionChangedEventArgs e)
         {
-            ITextViewLine newLine = GetLineByPos(e.NewPosition);
-            ITextViewLine oldLine = GetLineByPos(e.OldPosition);
+            var newLine = GetLineByPos(e.NewPosition);
+            var oldLine = GetLineByPos(e.OldPosition);
             if (newLine != oldLine)
             {
                 this.layer.RemoveAdornmentsByTag(CURRENT_LINE_TAG);
@@ -144,14 +144,14 @@ namespace BracketPairColorizer.Core.Text
             {
                 this.layer.RemoveAllAdornments();
                 var caret = this.view.Caret.Position;
-                ITextViewLine line = GetLineByPos(caret);
+                var line = GetLineByPos(caret);
                 this.CreateVisuals(line);
             }
         }
 
         private ITextViewLine GetLineByPos(CaretPosition pos)
         {
-            SnapshotPoint point = pos.BufferPosition;
+            var point = pos.BufferPosition;
             if (point.Snapshot != this.view.TextSnapshot)
             {
                 point = point.TranslateTo(this.view.TextSnapshot, PointTrackingMode.Positive);
@@ -170,10 +170,10 @@ namespace BracketPairColorizer.Core.Text
         {
             if (!IsEnabled()) { return; }
 
-            IWpfTextViewLineCollection textViewLines = view.TextViewLines;
+            var textViewLines = view.TextViewLines;
             if (textViewLines == null)
                 return;
-            SnapshotSpan span = line.Extent;
+            var span = line.Extent;
             var rc = new Rect(new Point(this.view.ViewportLeft, line.TextTop),
                 new Point(Math.Max(this.view.ViewportRight - 2, line.TextRight), line.TextBottom));
 

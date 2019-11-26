@@ -54,7 +54,7 @@ namespace BracketPairColorizer.Core.Outlining
                 return;
             }
             filename = VsSolution.MakeRelativePath(filename);
-            OutlineSettings settings = sus.Load<OutlineSettings>(filename);
+            var settings = sus.Load<OutlineSettings>(filename);
             if (settings != null)
             {
                 this.Regions.LoadStoredData(buffer.CurrentSnapshot, settings);

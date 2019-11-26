@@ -86,7 +86,8 @@
     <Compile Include="Contracts\ILogger.cs" />
     <Compile Include="Contracts\IPresentationModeState.cs" />
     <Compile Include="Contracts\IVsFeatures.cs" />
-    <Compile Include="Contracts\IVsfTelemetry.cs" />
+    <Compile Include="Contracts\IBpcTelemetry.cs" />
+    <Compile Include="Design\NativeMethods.cs" />
     <Compile Include="EditorFormats\CurrentColumnFormat.cs" />
     <Compile Include="EditorFormats\CurrentLineFormat.cs" />
     <Compile Include="EditorFormats\FlowControlFormat.cs" />
@@ -122,7 +123,7 @@
     <Compile Include="Settings\ContentTypes.cs" />
     <Compile Include="Settings\DefaultNames.cs" />
     <Compile Include="Settings\Guids.cs" />
-    <Compile Include="Settings\IVsfSettings.cs" />
+    <Compile Include="Settings\IBpcSettings.cs" />
     <Compile Include="Settings\LanguageExtensions.cs" />
     <Compile Include="Settings\PkgCmdIdList.cs" />
     <Compile Include="Settings\PkgSource.cs" />
@@ -130,8 +131,8 @@
     <Compile Include="Settings\SettingsContext.cs" />
     <Compile Include="Settings\SnapshotExtensions.cs" />
     <Compile Include="Settings\TextEditor.cs" />
-    <Compile Include="Settings\VsfSettingEventManager.cs" />
-    <Compile Include="Settings\VsfSettings.cs" />
+    <Compile Include="Settings\BpcSettingEventManager.cs" />
+    <Compile Include="Settings\BcpSettings.cs" />
     <Compile Include="Settings\VsSolution.cs" />
     <Compile Include="Tags\KeywordTag.cs" />
     <Compile Include="Tags\KeywordTaggerProvider.cs" />
@@ -179,7 +180,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Design\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>

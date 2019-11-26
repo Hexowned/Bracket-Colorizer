@@ -1,6 +1,7 @@
 ﻿using BracketPairColorizer.Core.Settings;
 using BracketPairColorizer.Core.Tags;
 using BracketPairColorizer.Core.Utilities;
+using BracketPairColorizer.Settings;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Text.Editor;
@@ -22,7 +23,7 @@ namespace BracketPairColorizer.Core.Text
         private IClassificationTypeRegistryService registryService = null;
 
         [Import]
-        private IVsfSettings settings = null;
+        private IBpcSettings settings = null;
 
         public ITagger<T> CreateTagger<T>(ITextView view, ITextBuffer buffer) where T : ITag
         {
@@ -37,13 +38,13 @@ namespace BracketPairColorizer.Core.Text
         private ITextView theView;
         private ITextBuffer theBuffer;
         private IClassificationType obfuscationType;
-        private IVsfSettings settings;
+        private IBpcSettings settings;
         private bool enabled;
         private List<RegexEntry> expressionsToSearch;
 
         public event EventHandler<SnapshotSpanEventArgs> TagsChanged;
 
-        public TextObfuscationTagger(ITextView view, ITextBuffer buffer, IClassificationType obfuscationType, IVsfSettings settings)
+        public TextObfuscationTagger(ITextView view, ITextBuffer buffer, IClassificationType obfuscationType, IBpcSettings settings)
         {
             this.theView = view;
             this.theBuffer = buffer;

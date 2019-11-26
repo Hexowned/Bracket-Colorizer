@@ -1,4 +1,5 @@
-﻿using BracketPairColorizer.Languages;
+﻿using BracketPairColorizer.Core.Settings;
+using BracketPairColorizer.Languages;
 using BracketPairColorizer.Rainbow.Settings;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
@@ -37,7 +38,7 @@ namespace BracketPairColorizer.Rainbow
             this.TextBuffer.ChangedLowPriority += this.BufferChanged;
             this.TextBuffer.ContentTypeChanged += this.ContentTypeChanged;
             this.Dispatcher = Dispatcher.CurrentDispatcher;
-            VsfSettingsEventManager.AddListener(this.Settings, this);
+            BpcSettingEventManager.AddListener(this.Settings, this);
 
             UpdateBraceList(new SnapshotPoint(buffer.CurrentSnapshot, 0));
         }
@@ -106,7 +107,7 @@ namespace BracketPairColorizer.Rainbow
 
             if (Settings != null)
             {
-                VsfSettingsEventManager.RemoveListener(this.Settings, this);
+                BpcSettingEventManager.RemoveListener(this.Settings, this);
                 Settings = null;
             }
         }

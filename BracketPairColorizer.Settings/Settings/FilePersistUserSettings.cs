@@ -4,7 +4,7 @@ namespace BracketPairColorizer.Settings.Settings
 {
     public class FilePersistUserSettings : IPersistSettings
     {
-        public const string FILENAME = "settings.vsfuser";
+        public const string FILENAME = "settings.bpcuser";
         private readonly string settingsFile;
 
         public FilePersistUserSettings(string location)

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.Shell;
+using System;
 
 namespace BracketPairColorizer.Core.Compatibility
 {
     public class SComponentModel
     {
-        public const string SComponentModelHost = ""; // TODO:
+        public const string SComponentModelHost = "FD57C398-FDE3-42c2-A358-660F269CBE43";
         private object sComponentModel;
 
         public SComponentModel()

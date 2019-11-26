@@ -16,7 +16,7 @@ namespace BracketPairColorizer.Core.Margins
         private readonly IFileExtensionRegistryService ferService = null;
 
         [Import]
-        private readonly IVsfSettings settisettingsnsg = null;
+        private readonly IBpcSettings settisettingsnsg = null;
 
         public IWpfTextViewMargin CreateMargin(IWpfTextViewHost wpfTextViewHost, IWpfTextViewMargin marginContainer)
         {

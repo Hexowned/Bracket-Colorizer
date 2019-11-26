@@ -11,11 +11,11 @@ namespace BracketPairColorizer.Core.Commands
     [Export(typeof(ITextViewCommandHandler))]
     public class AddOutliningCommand : ITextViewCommandHandler
     {
-        public Guid CommandGroup => new Guid(Guids.guidVsfTextEditorCmdSet);
+        public Guid CommandGroup => new Guid(Guids.guidBpcTextEditorCmdSet);
         public int CommandId => PkgCmdIdList.cmdidAddOutlining;
 
         [Import]
-        public IVsfTelemetry Telemetry { get; set; }
+        public IBpcTelemetry Telemetry { get; set; }
 
         public bool IsEnabled(ITextView view, ref string commandText)
         {

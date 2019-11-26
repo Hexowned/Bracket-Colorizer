@@ -14,11 +14,11 @@ namespace BracketPairColorizer.Core.Margins
         private IFileExtensionRegistryService extensionRegistry;
         private IWpfTextViewHost wpfTextViewHost;
         private IWpfTextView textView;
-        private IVsfSettings settings;
+        private IBpcSettings settings;
         private DevMarginVisual visual;
         private DevMarginViewModel model;
 
-        public DevViewMargin(IWpfTextViewHost wpfTextViewHost, IFileExtensionRegistryService fers, IVsfSettings settings)
+        public DevViewMargin(IWpfTextViewHost wpfTextViewHost, IFileExtensionRegistryService fers, IBpcSettings settings)
         {
             this.model = new DevMarginViewModel();
             this.wpfTextViewHost = wpfTextViewHost;

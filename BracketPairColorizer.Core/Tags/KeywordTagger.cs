@@ -22,7 +22,7 @@ namespace BracketPairColorizer.Core.Tags
         private KeywordTag formatSpecClassification;
         private ITagAggregator<IClassificationTag> aggregator;
         private ILanguageFactory languageFactory;
-        private IVsfSettings settings;
+        private IBpcSettings settings;
 
         public event EventHandler<SnapshotSpanEventArgs> TagsChanged;
 

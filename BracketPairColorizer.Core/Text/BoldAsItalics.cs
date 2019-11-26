@@ -19,7 +19,7 @@ namespace BracketPairColorizer.Core.Text
         private IClassificationFormatMapService formatService = null;
 
         [Import]
-        private IVsfSettings settings = null;
+        private IBpcSettings settings = null;
 
         public void TextViewCreated(IWpfTextView textView)
         {
@@ -32,10 +32,10 @@ namespace BracketPairColorizer.Core.Text
     public class BoldAsItalicsFormatter
     {
         private IClassificationFormatMap formatMap;
-        private IVsfSettings settings;
+        private IBpcSettings settings;
         private bool working = false;
 
-        public BoldAsItalicsFormatter(IWpfTextView textView, IClassificationFormatMap map, IVsfSettings settings)
+        public BoldAsItalicsFormatter(IWpfTextView textView, IClassificationFormatMap map, IBpcSettings settings)
         {
             this.formatMap = map;
             this.settings = settings;

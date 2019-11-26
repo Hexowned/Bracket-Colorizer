@@ -10,13 +10,13 @@ namespace BracketPairColorizer.Core.Text
     {
         public bool PresentationModeTurnedOn { get; private set; }
         private PresentationModeFontChanger fontChanger;
-        private IVsfSettings settings;
-        private IVsfTelemetry telemetry;
+        private IBpcSettings settings;
+        private IBpcTelemetry telemetry;
 
         public event EventHandler PresentationModeChanged;
 
         [ImportingConstructor]
-        public PresentationModeState(IVsfSettings settingsManager, IVsfTelemetry telemetry)
+        public PresentationModeState(IBpcSettings settingsManager, IBpcTelemetry telemetry)
         {
             this.fontChanger = new PresentationModeFontChanger(this);
             this.settings = settingsManager;

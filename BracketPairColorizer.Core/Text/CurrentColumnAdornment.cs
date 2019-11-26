@@ -17,11 +17,11 @@ namespace BracketPairColorizer.Core.Text
         private IWpfTextView view;
         private IClassificationFormatMap formatMap;
         private IClassificationType formatType;
-        private IVsfSettings settings;
+        private IBpcSettings settings;
         private Border highlight;
         private Dispatcher dispatcher;
 
-        public CurrentColumnAdornment(IWpfTextView view, IClassificationFormatMap formatMap, IClassificationType formatType, IVsfSettings settings)
+        public CurrentColumnAdornment(IWpfTextView view, IClassificationFormatMap formatMap, IClassificationType formatType, IBpcSettings settings)
         {
             this.view = view;
             this.formatMap = formatMap;
@@ -187,7 +187,7 @@ namespace BracketPairColorizer.Core.Text
         {
             if (!this.settings.CurrentColumnHighlightEnabled) { return; }
 
-            IWpfTextViewLineCollection textViewLines = this.view.TextViewLines;
+            var textViewLines = this.view.TextViewLines;
             if (textViewLines == null)
                 return;
             if (caretPosition.Position.Snapshot != this.view.TextBuffer.CurrentSnapshot)

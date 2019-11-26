@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.Editor;
+﻿using BracketPairColorizer.Core.Settings;
+using BracketPairColorizer.Rainbow.Settings;
+using Microsoft.VisualStudio.Editor;
 using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Text;
@@ -52,7 +54,7 @@ namespace BracketPairColorizer.Rainbow
         public int QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)
         {
             bool enabled = false;
-            if (pguidCmdGroup == Guids.VsfTextEditorCmdSet)
+            if (pguidCmdGroup == Guids.BpcTextEditorCmdSet)
             {
                 var cmdId = (int)prgCmds[0].cmdID;
                 switch (cmdId)
@@ -76,7 +78,7 @@ namespace BracketPairColorizer.Rainbow
             var mode = RainbowHighlightMode.TrackInsertionPoint;
             int hr = VSConstants.S_OK;
             bool handled = false;
-            if (pguidCmdGroup == Guids.VsfTextEditorCmdSet)
+            if (pguidCmdGroup == Guids.BpcTextEditorCmdSet)
             {
                 switch ((int)nCmdID)
                 {

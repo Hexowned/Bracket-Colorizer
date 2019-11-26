@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.Text.Editor;
+﻿using BracketPairColorizer.Core.Settings;
+using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Projection;
 using Microsoft.VisualStudio.Utilities;
 using System;
@@ -62,7 +63,7 @@ namespace BracketPairColorizer.Core.Margins
             }
             NotifyChanged("BufferGraph");
             this.SelectedBuffer = this.bufferGraph.FirstOrDefault(
-              b => TextEditor.IsNonProjectionOrElisionBufferType(b.BufferType));
+              b => TextEditor.IsNonProjectOrElisionBufferType(b.BufferType));
         }
 
         private void NotifyChanged(string property)

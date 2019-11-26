@@ -29,9 +29,9 @@ namespace BracketPairColorizer.Core.Settings
         public const string XmlOptions = "";
 
         // Command groups
-        public const string guidVsfViewCmdSet = "";
+        public const string guidBpcViewCmdSet = "";
 
-        public const string guidVsfTextEditorCmdSet = "";
-        public static readonly Guid VsfTextEditorCmdSet = new Guid(guidVsfTextEditorCmdSet);
+        public const string guidBpcTextEditorCmdSet = "";
+        public static readonly Guid BpcTextEditorCmdSet = new Guid(guidBpcTextEditorCmdSet);
     }
 }

@@ -10,10 +10,10 @@ namespace BracketPairColorizer.Core.Utilities
     public class VsActivityLogger : ILogger
     {
         private readonly IVsActivityLog activityLog;
-        private readonly IVsfTelemetry telemetry;
+        private readonly IBpcTelemetry telemetry;
 
         [ImportingConstructor]
-        public VsActivityLogger(SVsServiceProvider serviceProvider, IVsfTelemetry telemetry)
+        public VsActivityLogger(SVsServiceProvider serviceProvider, IBpcTelemetry telemetry)
         {
             this.telemetry = telemetry;
             this.activityLog = serviceProvider.GetService(typeof(SVsActivityLog)) as IVsActivityLog;

@@ -1,5 +1,4 @@
 ﻿using BracketPairColorizer.Core.Settings;
-using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Outlining;
 using Microsoft.VisualStudio.Utilities;
@@ -20,7 +19,7 @@ namespace BracketPairColorizer.Core.Outlining
         private readonly IVsOutliningManagerService outlining = null;
 
         [Import]
-        private readonly IVsfSettings settings = null;
+        private readonly IBpcSettings settings = null;
 
         public void TextViewCreated(IWpfTextView textView)
         {
@@ -38,9 +37,9 @@ namespace BracketPairColorizer.Core.Outlining
         private IWpfTextView theView;
         private IVsOutliningManager outliningManager;
         private readonly AutoExpandMode expandMode;
-        private IVsfSettings settings;
+        private IBpcSettings settings;
 
-        public AutoExpander(IWpfTextView textView, IVsOutliningManager outlining, IVsfSettings settings)
+        public AutoExpander(IWpfTextView textView, IVsOutliningManager outlining, IBpcSettings settings)
         {
             this.settings = settings;
             this.theView = textView;
@@ -107,7 +106,7 @@ namespace BracketPairColorizer.Core.Outlining
             var snapshot = this.theView.TextSnapshot;
             if (snapshot != null)
             {
-                SnapshotSpan span = snapshot.GetSpan();
+                var span = snapshot.GetSpan();
                 this.outliningManager.ExpandAll(span, collapsed => true);
             }
         }

@@ -67,7 +67,7 @@ namespace BracketPairColorizer.Rainbow
         private int AdjustForInvalidation(int index)
         {
             int newIndex = index;
-            IResumeControl control = this.braceScanner as IResumeControl;
+            var control = this.braceScanner as IResumeControl;
             if (control != null)
             {
                 for (; newIndex > 0; newIndex--)
@@ -101,7 +101,7 @@ namespace BracketPairColorizer.Rainbow
 
                 for (int j = startIndex; j < this.braces.Count; j++)
                 {
-                    BracePosition bp = this.braces[j];
+                    var bp = this.braces[j];
                     if (bp.Position > wantedSpan.End) break;
                     yield return bp;
                 }
@@ -129,7 +129,7 @@ namespace BracketPairColorizer.Rainbow
         public IEnumerable<BracePosition> BracesFromPosition(int position)
         {
             if (ScanIsUnnecessary()) return new BracePosition[0];
-            SnapshotSpan snan = new SnapshotSpan(Snapshot, position, Snapshot.Length - position);
+            var snan = new SnapshotSpan(Snapshot, position, Snapshot.Length - position);
 
             return BracesInSpans(new NormalizedSnapshotSpanCollection(span));
         }
@@ -143,7 +143,7 @@ namespace BracketPairColorizer.Rainbow
 
             int index = FindIndexOfBraceAtOrAfter(point.Position);
             if (index < 0) return null;
-            BracePosition one = this.braces[index];
+            var one = this.braces[index];
             if (one.Position != point.Position) { return null; }
 
             if (IsOpeningBrace(one.Brace))
@@ -199,7 +199,7 @@ namespace BracketPairColorizer.Rainbow
             openIndex = FindIndexOfBraceAtOrAfter(position);
             if (openIndex >= 0)
             {
-                BracePosition pos = this.braces[openIndex];
+                var pos = this.braces[openIndex];
                 if (IsOpeningBrace(pos.Brace) && pos.Position == position) { return pos; }
             }
 
@@ -214,7 +214,7 @@ namespace BracketPairColorizer.Rainbow
             int pairs = 0;
             while (openIndex >= 0)
             {
-                BracePosition current = this.braces[openIndex];
+                var current = this.braces[openIndex];
                 if (!IsOpeningBrace(current.Brace))
                 {
                     pairs++;
@@ -253,7 +253,7 @@ namespace BracketPairColorizer.Rainbow
             var pairs = GetStacker(this.coloringMode);
             for (int i = 0; i < this.braces.Count; i++)
             {
-                BracePosition r = this.braces[i];
+                var r = this.braces[i];
                 if (r.Position > parseFrom) break;
                 if (IsOpeningBrace(r.Brace))
                 {
@@ -361,7 +361,7 @@ namespace BracketPairColorizer.Rainbow
             while (first <= last)
             {
                 int mid = (first + last) / 2;
-                BracePosition midPos = this.braces[mid];
+                var midPos = this.braces[mid];
                 if (midPos.Position < position)
                 {
                     first = mid + 1;
@@ -387,7 +387,7 @@ namespace BracketPairColorizer.Rainbow
             while (first <= last)
             {
                 int mid = (first + last) / 2;
-                BracePosition midPos = this.braces[mid];
+                var midPos = this.braces[mid];
                 if (midPos.Position < position)
                 {
                     candidate = mid;
@@ -427,7 +427,7 @@ namespace BracketPairColorizer.Rainbow
             for (int i = 0; i < this.braceErrors.Count; i++)
             {
                 lastPos = i;
-                CharPosition ch = this.braceErrors[i];
+                var ch = this.braceErrors[i];
                 if (ch.Position >= position) break;
             }
 

@@ -9,8 +9,8 @@ using System.ComponentModel.Composition;
 
 namespace BracketPairColorizer
 {
-    [Export(typeof(IVsfTelemetry))]
-    public class TelemetryService : IVsfTelemetry
+    [Export(typeof(IBpcTelemetry))]
+    public class TelemetryService : IBpcTelemetry
     {
         private readonly Telemetry telemetry;
         public bool Enabled => this.telemetry.Enabled;
@@ -18,7 +18,7 @@ namespace BracketPairColorizer
         [ImportingConstructor]
         public TelemetryService(SVsServiceProvider serviceProvider, ITypedSettingsStore settings)
         {
-            bool telemetryEnabled = settings.GetBoolean(nameof(IVsfSettings.TelemetryEnabled), true);
+            bool telemetryEnabled = settings.GetBoolean(nameof(IBpcSettings.TelemetryEnabled), true);
             var dte = (EnvDTE80.DTE2)serviceProvider.GetService(typeof(SDTE));
             this.telemetry = new Telemetry(telemetryEnabled, dte);
         }

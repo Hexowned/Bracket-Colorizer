@@ -2,7 +2,7 @@
 
 namespace BracketPairColorizer.Core.Contracts
 {
-    public interface IVsfTelemetry
+    public interface IBpcTelemetry
     {
         bool Enabled { get; }
 

@@ -5,11 +5,11 @@ using System.ComponentModel.Composition;
 
 namespace BracketPairColorizer.Core.Settings
 {
-    [Export(typeof(IVsfSettings))]
-    public class VsfSettings : SettingsBase, IVsfSettings
+    [Export(typeof(IBpcSettings))]
+    public class BcpSettings : SettingsBase, IBpcSettings
     {
         [ImportingConstructor]
-        public VsfSettings(ITypedSettingsStore store, IVsfTelemetry telemetry)
+        public BcpSettings(ITypedSettingsStore store, IBpcTelemetry telemetry)
             : base(store)
         {
             telemetry.FeatureStatus("DeveloperMargin", DeveloperMarginEnabled);

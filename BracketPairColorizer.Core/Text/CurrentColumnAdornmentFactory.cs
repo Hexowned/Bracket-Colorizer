@@ -15,7 +15,7 @@ namespace BracketPairColorizer.Core.Text
         public IClassificationFormatMapService FormatMapService { get; set; }
 
         [Import]
-        public IVsfSettings Settigs { get; set; }
+        public IBpcSettings Settigs { get; set; }
 
         [Export(typeof(AdornmentLayerDefinition))]
         [Name(ZoomConstants.COLUMN_HIGHLIGHT)]
@@ -24,8 +24,8 @@ namespace BracketPairColorizer.Core.Text
 
         public void TextViewCreated(IWpfTextView textView)
         {
-            IClassificationType classification = ClassificationRegistry.GetClassificationType(Constants.COLUMN_HIGHLIGHT);
-            IClassificationFormatMap map = FormatMapService.GetClassificationFormatMap(textView);
+            var classification = ClassificationRegistry.GetClassificationType(Constants.COLUMN_HIGHLIGHT);
+            var map = FormatMapService.GetClassificationFormatMap(textView);
 
             textView.Properties.GetOrCreateSingletonProperty(() =>
             {

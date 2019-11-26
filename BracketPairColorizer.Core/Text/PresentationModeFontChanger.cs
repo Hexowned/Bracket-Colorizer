@@ -8,7 +8,7 @@ namespace BracketPairColorizer.Core.Text
     public class PresentationModeFontChanger
     {
         private IPresentationModeState packageState;
-        private IVsfSettings settings;
+        private IBpcSettings settings;
         private FontCategory[] categories;
         private IVsFontAndColorStorage fontsAndColors;
         private bool enabled;
