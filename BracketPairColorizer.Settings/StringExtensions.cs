@@ -19,7 +19,7 @@ namespace BracketPairColorizer.Settings
             return values;
         }
 
-        public static string Fromlist(this IEnumerable<string> list)
+        public static string FromList(this IEnumerable<string> list)
         {
             var sb = new StringBuilder();
             foreach (string s in list)

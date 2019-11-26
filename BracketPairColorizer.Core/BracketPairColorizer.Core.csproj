@@ -76,6 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classifications\CodeClassificationDefinitions.cs" />
+    <Compile Include="Commands\AddOutliningCommand.cs" />
+    <Compile Include="Commands\ClearOutliningCommand.cs" />
+    <Compile Include="Commands\ITextViewCommandHandler.cs" />
+    <Compile Include="Commands\RemoveOutliningCommand.cs" />
+    <Compile Include="Commands\SelectionOutliningCommand.cs" />
+    <Compile Include="Commands\TextViewCommandListener.cs" />
     <Compile Include="Compatibility\SComponentModel.cs" />
     <Compile Include="Contracts\ILogger.cs" />
     <Compile Include="Contracts\IPresentationModeState.cs" />
@@ -173,7 +179,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\" />
     <Folder Include="Design\" />
     <Folder Include="Resources\" />
   </ItemGroup>
