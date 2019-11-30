@@ -132,7 +132,7 @@
     <Compile Include="Settings\SnapshotExtensions.cs" />
     <Compile Include="Settings\TextEditor.cs" />
     <Compile Include="Settings\BpcSettingEventManager.cs" />
-    <Compile Include="Settings\BcpSettings.cs" />
+    <Compile Include="Settings\BpcSettings.cs" />
     <Compile Include="Settings\VsSolution.cs" />
     <Compile Include="Tags\KeywordTag.cs" />
     <Compile Include="Tags\KeywordTaggerProvider.cs" />

@@ -6,10 +6,10 @@ using System.ComponentModel.Composition;
 namespace BracketPairColorizer.Core.Settings
 {
     [Export(typeof(IBpcSettings))]
-    public class BcpSettings : SettingsBase, IBpcSettings
+    public class BpcSettings : SettingsBase, IBpcSettings
     {
         [ImportingConstructor]
-        public BcpSettings(ITypedSettingsStore store, IBpcTelemetry telemetry)
+        public BpcSettings(ITypedSettingsStore store, IBpcTelemetry telemetry)
             : base(store)
         {
             telemetry.FeatureStatus("DeveloperMargin", DeveloperMarginEnabled);
