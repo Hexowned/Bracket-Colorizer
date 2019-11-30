@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyConfiguration("")]
@@ -14,5 +13,5 @@ using System.Runtime.InteropServices;
 
 internal static class BpcVersion
 {
-    public const String Version = "1.0.0.0";
+    public const string Version = "1.0.0.0";
 }

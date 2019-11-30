@@ -16,13 +16,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3FE44386-5C1B-4F12-A715-0A1806E71A64}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		AssemblyInfo.Common.cs = AssemblyInfo.Common.cs
 		Global.props = Global.props
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{A95F154F-913C-45E8-AD8D-93D6C9C46C54}"
-	ProjectSection(SolutionItems) = preProject
-		AssemblyInfo.Common.cs = AssemblyInfo.Common.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3BE94698-D781-4CB2-9B5A-C67CE8AB041C}"
 EndProject

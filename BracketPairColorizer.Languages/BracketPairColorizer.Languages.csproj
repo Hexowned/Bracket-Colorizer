@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyInfo.Common.cs">
+      <Link>Properties\AssemblyInfo.Common.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="BraceScanners\CBraceScanner.cs" />
     <Compile Include="BraceScanners\CSharpBraceScanner.cs" />
     <Compile Include="BraceScanners\CssBraceScanner.cs" />
@@ -83,7 +88,6 @@
     <Compile Include="Lang\SQL.cs" />
     <Compile Include="Lang\TypeScript.cs" />
     <Compile Include="Lang\VisualBasic.cs" />
-    <Compile Include="Properties\AssemblyInfo.Common.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\BasicCStringScanner.cs" />
     <Compile Include="Sequences\CSharpsStringScanner.cs" />

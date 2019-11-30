@@ -75,6 +75,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyInfo.Common.cs">
+      <Link>Properties\AssemblyInfo.Common.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Classifications\CodeClassificationDefinitions.cs" />
     <Compile Include="Commands\AddOutliningCommand.cs" />
     <Compile Include="Commands\ClearOutliningCommand.cs" />
@@ -116,7 +121,6 @@
     <Compile Include="Outlining\SelectionOutliningTaggerProvider.cs" />
     <Compile Include="Outlining\UserOutliningManager.cs" />
     <Compile Include="Outlining\UserOutliningTaggerProvider.cs" />
-    <Compile Include="Properties\AssemblyInfo.Common.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\CommonExtensions.cs" />
     <Compile Include="Settings\Constants.cs" />

@@ -78,6 +78,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyInfo.Common.cs">
+      <Link>Properties\AssemblyInfo.Common.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="BracePosition.cs" />
     <Compile Include="Classifications\RainbowClassifications.cs" />
     <Compile Include="Classifications\Rainbows.cs" />
