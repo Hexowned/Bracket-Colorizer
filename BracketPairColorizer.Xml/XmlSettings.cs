@@ -1,11 +1,10 @@
-using System;
-using System.ComponentModel;
-using BracketPairColorizer.Contracts;
-using BracketPairColorizer.Settings;
+﻿using BracketPairColorizer.Core.Contracts;
+using BracketPairColorizer.Settings.Settings;
+using System.ComponentModel.Composition;
 
 namespace BracketPairColorizer.Xml
 {
-    [ExtenderProvidedProperty(typeof(IXmlSettings))]
+    [Export(typeof(IXmlSettings))]
     public class XmlSettings : SettingsBase, IXmlSettings
     {
         public bool XmlnsPrefixEnabled
