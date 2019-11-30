@@ -118,9 +118,6 @@
     <Compile Include="Utilities\ViewTipProperty.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="Design\InfoPresenter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +136,9 @@
       <Project>{3591C3FA-EF02-4558-BA6E-6BB3D6695EEC}</Project>
       <Name>BracketPairColorizer.Settings</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

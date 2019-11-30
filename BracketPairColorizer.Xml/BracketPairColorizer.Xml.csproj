@@ -102,9 +102,6 @@
     <Compile Include="XmlTagMatchingTaggerProvider.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BracketPairColorizer.Core\BracketPairColorizer.Core.csproj">
       <Project>{3e0d5bdf-ffa1-4002-8819-c2c4ebc0ba21}</Project>
       <Name>BracketPairColorizer.Core</Name>
@@ -113,6 +110,9 @@
       <Project>{3591c3fa-ef02-4558-ba6e-6bb3d6695eec}</Project>
       <Name>BracketPairColorizer.Settings</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
