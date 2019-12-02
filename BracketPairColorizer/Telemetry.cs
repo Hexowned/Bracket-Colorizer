@@ -13,7 +13,7 @@ namespace BracketPairColorizer
 {
     public class Telemetry
     {
-        private TelemetryClient client;
+        private readonly TelemetryClient client;
         public bool Enabled { get; private set; }
 
         public Telemetry(bool enabled, EnvDTE80.DTE2 dte = null)

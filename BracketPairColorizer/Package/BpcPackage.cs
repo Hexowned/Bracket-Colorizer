@@ -1,6 +1,8 @@
-﻿using BracketPairColorizer.Core.Compatibility;
+﻿using BracketPairColorizer.Commands;
+using BracketPairColorizer.Core.Compatibility;
 using BracketPairColorizer.Core.Contracts;
 using BracketPairColorizer.Core.Settings;
+using BracketPairColorizer.Core.Text;
 using BracketPairColorizer.Settings.Contracts;
 using Microsoft.VisualStudio.Shell;
 using System;
@@ -9,9 +11,9 @@ using System.ComponentModel.Design;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace BracketPairColorizer
+namespace BracketPairColorizer.Package
 {
-    [PackageRegistration(UserManagedResourcesOnly = true)]
+    [PackageRegistration(UseManagedResourcesOnly = = true)]
     [Guid(Guids.VSPackage)]
     [InstalledProductRegistration("", "", productId: BpcVersion.Version, IconResourceID = 400)]
     // TODO: use [ProvideOptionPage] of the type of options to have to create the options board
